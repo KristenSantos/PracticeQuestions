@@ -14,11 +14,10 @@
 //             trustCheck = false;
 //         }
 //     } 
-//     if(trustCheck){
-//         return trustNum
-//     } else {
-//         return -1
-//     }
+//     if(trustCheck) return trustNum
+        
+//     return -1
+
 // };
 /*
 Input: n = 3, trust = [[1,3],[2,3]]
@@ -32,11 +31,7 @@ for(const [a,b] of trust){
     trustArray[a]--
     trustArray[b]++;
 }
-for(let i = 1; i < trustArray.length; i++){
-    if(trustArray[i] === n-1){
-        return i
-    }
-}
-return -1
+
+    return trustArray.lastIndexOf(n-1)
 
 };
