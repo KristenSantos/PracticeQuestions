@@ -12,7 +12,7 @@
  */
 
  /*
- P: Find if the linked list is a cycle
+ P: Check and see if the linked list given has a cycle 
  E:
 
  */
