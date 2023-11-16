@@ -26,14 +26,14 @@ var mergeSimilarItems = function(items1, items2) {
       obj[val] += weight
     }
   }
-    console.log(obj)
+
   
 
   // iterate throught the object and push the key value pair as an array into the object
   for(const key in obj){
       res.push([Number(key), obj[key]])
   }
-  console.log(res)
+
 
   //sort the array 
 
