@@ -25,7 +25,6 @@
 var removeNthFromEnd = function(head, n) {
     let linkedLength = 0
     let pointer = head
-    let secondPoint = head
     while(pointer !== null){
         linkedLength++
         pointer = pointer.next
@@ -35,10 +34,14 @@ var removeNthFromEnd = function(head, n) {
     if (endLinked === 0){
         return head.next
     }
+    pointer = head
     for(let i = 1; i < endLinked; i++){
-        secondPoint = secondPoint.next
+        pointer = pointer.next
     }
-    secondPoint.next = secondPoint.next.next
+    pointer.next = pointer.next.next
     return head
     
 };
+
+//Time Complexity = o(n)
+//Space Complexity = 
