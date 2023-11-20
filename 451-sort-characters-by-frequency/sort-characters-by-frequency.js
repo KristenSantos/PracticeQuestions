@@ -13,7 +13,6 @@ var frequencySort = function(s) {
         }
     }
     let arr = Object.values(obj);
-    console.log(arr)
     arr.sort((a,b) => a.length - b.length)
 
    for(let i = arr.length-1; i >= 0; i--){
