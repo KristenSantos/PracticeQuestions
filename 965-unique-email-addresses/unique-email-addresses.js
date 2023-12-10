@@ -18,10 +18,8 @@ var numUniqueEmails = function(emails) {
         let [local, domain] = emails[i].split('@')
         local = local.replaceAll('.', "")
         local = local.split('+')
-        console.log(local)
         let newDomain = local[0] + '@' + domain
         emailSet.add(newDomain)
     }
-    console.log(emailSet)
     return emailSet.size
 };
