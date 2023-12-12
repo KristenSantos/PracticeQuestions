@@ -34,4 +34,3 @@ var nextGreaterElement = function(nums1, nums2) {
     }
     return greaterElements
 }
-
