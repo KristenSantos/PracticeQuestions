@@ -16,17 +16,19 @@ C:
 */
  
 var replaceElements = function(arr) {
-    let max = arr[arr.length - 1];
-    arr[arr.length-1] = -1;
-    for(let i = arr.length-2; i >= 0; i--){
-        if(max > arr[i]){
+    let max = arr[arr.length-1]
+    arr[arr.length - 1] = -1
+
+    for(let i = arr.length - 2; i >= 0; i--){
+        if(arr[i] < max){
             arr[i] = max
-        }
-        else {
-            const hold = max;
+            
+        } else {
+            const hold = max
             max = arr[i]
             arr[i] = hold
         }
+
     }
     return arr
 };
@@ -48,15 +50,23 @@ var replaceElements = function(arr) {
 
 
 
-//   let max = arr[arr.length-1];
-//   arr[arr.length-1] = -1;
-//   for(let i= arr.length-2; i >= 0; i--){
-//       if (max > arr[i]){
-//           arr[i] = max
-//       } else{
-//           const hold = max;
-//           max = arr[i];
-//           arr[i] = hold
-//       }
-//   }
-// return arr
+
+
+
+
+
+
+
+    // let max = arr[arr.length - 1];
+    // arr[arr.length-1] = -1;
+    // for(let i = arr.length-2; i >= 0; i--){
+    //     if(max > arr[i]){
+    //         arr[i] = max
+    //     }
+    //     else {
+    //         const hold = max;
+    //         max = arr[i]
+    //         arr[i] = hold
+    //     }
+    // }
+    // return arr
