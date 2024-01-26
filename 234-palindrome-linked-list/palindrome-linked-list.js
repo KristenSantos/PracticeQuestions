@@ -11,29 +11,26 @@
  */
 var isPalindrome = function(head) {
     let fast = head;
-    let slow = head; 
+    let slow = head;
     while(fast && fast.next){
         slow = slow.next
         fast = fast.next.next
     }
-
-    let curr = slow
+    let current = slow;
     let prev = null;
-
-    while(curr){
-        next = curr.next;
-        curr.next = prev
-        prev = curr;
-        curr = next
+    while(current){
+        let next = current.next;
+        current.next = prev
+        prev = current;
+        current = next
     }
-    let middle = prev
-    while(head && middle){
-        
-        if(head.val !== middle.val){
+    while(prev){
+        if(head.val !== prev.val){
             return false
-        } 
+        }
+        prev = prev.next
         head = head.next
-        middle = middle.next
     }
     return true
+
 };
