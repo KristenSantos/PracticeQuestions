@@ -23,8 +23,6 @@ var canPlaceFlowers = function(flowerbed, n) {
             n--
         }
     }
-    console.log(n)
-    console.log(flowerbed)
     return n <= 0
         
 };
