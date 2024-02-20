@@ -26,6 +26,6 @@ var uniqueOccurrences = function(arr) {
         return false
     }
 };
-console.log(reoccurenceSet)
+
     return true
 };
