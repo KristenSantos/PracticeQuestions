@@ -2,27 +2,26 @@
  * @param {string} s
  * @return {number}
  */
-var lengthOfLongestSubstring = function(str) {
-    if(str.length === 0){
-        return 0
-    }
-    let longestSub = 0
-    let pointer1 = 0
-    let pointer2 = 0
-    let subSet = new Set()
-    while( pointer2 < str.length) {
+ /*
+ sliding window
 
-        if(!subSet.has(str[pointer2])){
-            subSet.add(str[pointer2]);
-            pointer2++
-            longestSub = Math.max(longestSub, pointer2 - pointer1)
-            
-        } else{
-            subSet.delete(str[pointer1])
-            pointer1++
+ */
 
+var lengthOfLongestSubstring = function(str){
+    const uniqueChar = new Set();
+    let left = 0;
+    let right = 0;
+    let max = 0; 
+    while(right < str.length){
+        if(!uniqueChar.has(str[right])){
+            uniqueChar.add(str[right]);
+            right++;
+            max = Math.max(max, right-left);
+        } else {
+            uniqueChar.delete(str[left]);
+            left++
         }
-
     }
-    return longestSub
+    console.log(max)
+    return max
 };
