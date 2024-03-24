@@ -3,31 +3,30 @@
  * @return {number}
  */
 
-const maxSum = function(a, b, c){
-    a *= c;
-    b = Math.max(b, a);
-    if(a === 0) a = 1;
-}
+
 
 var maxProduct = function(nums) {
-    let maximumProduct = 0;
-    let currentMax = 1;
-    if(nums.length == 1){
-        return nums[0]
-    }
-    for(let i = 0; i < nums.length; i++){
-        currentMax *= nums[i];
-        maximumProduct = Math.max(maximumProduct, currentMax);
-        if (currentMax === 0) currentMax = 1
-    }
+    let max = -Infinity;
+    let current = 1;
 
-    currentMax = 1;
+    for(let i = 0; i < nums.length; i++){
+        current *= nums[i]
+        if(current > max){
+            max = current;
+        }
+        if(current ===  0) current = 1
+    }
+    
+    current = 1;
 
     for(let i = nums.length-1; i >= 0; i--){
-        currentMax *= nums[i];
-        maximumProduct = Math.max(maximumProduct, currentMax);
-        if (currentMax === 0) currentMax = 1
-    }
+        console.log(nums[i])
+        current *= nums[i]
+        if(current > max){
+            max = current;
+        }
+        if(current ===  0) current = 1
 
-    return maximumProduct
+    }
+    return max
 };
