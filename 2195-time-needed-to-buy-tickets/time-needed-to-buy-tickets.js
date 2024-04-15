@@ -16,7 +16,6 @@ Other element in line dont have tp br equal to zero to return variable
 var timeRequiredToBuy = function(tickets, k) {
     let timeTaken = 0;
     let current = 0; 
-    console.log(tickets[k])
     while (tickets[k] > 0){
         if(tickets[current] > 0){
             tickets[current]--;
