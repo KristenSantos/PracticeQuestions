@@ -21,12 +21,11 @@ var timeRequiredToBuy = function(tickets, k) {
             tickets[current]--;
             timeTaken++;
             current++
-        } else if(tickets[current] === 0 )(
-            current++
-        )
-        if(current > tickets.length-1){
-            current = 0;
-        }
+        } 
+        else if(tickets[current] === 0 ) current++
+        
+        if(current > tickets.length-1) current = 0;
+        
     }
     return timeTaken
     
