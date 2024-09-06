@@ -4,34 +4,40 @@
  * @return {number[]}
  */
  
- /*
- P: Given an array of number return an array of indices of the two numbers that add up to the target value given.
 
- E: Input: [0, 5, 7, 0, 4, 6, 3, 6], 8
- Output: [1, 6]
+/*
+P: Given an array of numbers and a target value return the indices of the 2 
+that equal the target value
 
- D: Return an Array, 
- Use a map for optimal solution
+E:
+nums = [7,2,6,8,9], target = 11
+Output: [1,1]
+D:
+Hashmap stores the indice as the key and the value as the value
 
- A:
-Create a Map data structure. This is gonna be designed to store the number and its index
-
-Create a for loop that goes through the array 
-
-use get and set Map methods to 
-
- C:
- */
+A:
+Create the Hash map; 
+Loop through the nums arr
+Insert the values in the hashmap and check if any of the current 
+values in the hashmap add plus the current value add up to the target 
+if they do return those values contiune
+C:
+*/
 
 var twoSum = function(nums, target) {
-    let sum = new Map();
+    const map = {};
+
     for(let i = 0; i < nums.length; i++){
-        let complement = target - nums[i];
-        if(sum.has(complement)){
-            return [sum.get(complement), i];
+        let tracker = target - nums[i]
+        if(tracker in map){
+            console.log(map[tracker])
+            return [map[tracker],i]
+        } else {
+
+            map[nums[i]] = i
         }
-        else{
-            sum.set(nums[i], i)
-        }
+
+
     }
+
 }
