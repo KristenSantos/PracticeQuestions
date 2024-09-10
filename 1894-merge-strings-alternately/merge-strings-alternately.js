@@ -16,33 +16,3 @@ var mergeAlternately = function(word1, word2) {
     }
     return mergedString
 };
-
-
-
-
-
-
-
-
-
-
-    // let mergedString = ''
-    // while(mergedString.length < word1.length + word2.length){
-    //     let larger 
-    //     if(word1.length > word2.length){
-    //          larger = word1
-    //     } else {
-    //         larger = word2
-    //     }
-    //     for(let i = 0; i < larger.length; i++){
-    //         mergedString += word1[i]
-    //         mergedString += word2[i]
-    //         word1.replace(word1[i], '')
-    //         word1.replace(word2[i], '')
-    //         if(larger === word1){
-                
-    //         }
-        
-    //     }
-    // }
-    // console.log(mergedString)
