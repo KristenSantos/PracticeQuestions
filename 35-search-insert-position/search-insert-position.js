@@ -4,17 +4,26 @@
  * @return {number}
  */
 
+// var searchInsert = function(nums, target) {
+//     for(let i = 0; i < nums.length; i++){
+//         if( nums[i] === target){
+//             return i
+//         } 
+//         if(nums[i] > target){
+//             return i
+//         }
+//         if(nums[nums.length-1] < target){
+//             return nums.length
+//         }
+//     }
+
+// };
 var searchInsert = function(nums, target) {
+    if(nums[nums.length-1] < target) return nums.length
     for(let i = 0; i < nums.length; i++){
-        if( nums[i] === target){
+        if( nums[i] >= target){
             return i
-        } 
-        if(nums[i] > target){
-            return i
-        }
-        if(nums[nums.length-1] < target){
-            return nums.length
-        }
+        };
     }
 
 };
