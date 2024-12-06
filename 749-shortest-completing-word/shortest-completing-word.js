@@ -32,9 +32,11 @@ const shortestCompletingWord = (licensePlate, words) => {
     console.log(sortWords)
     for(let word of sortWords) {
         let copyLicence = fixLicence;
+        console.log(copyLicence)
 
         for(let i = 0; i < word.length; i++){
             copyLicence = copyLicence.replace(word[i],'');
+            console.log(copyLicence)
             if(!copyLicence) return word
         }
 
