@@ -15,18 +15,20 @@ D:
 A:
 C:
 */
- 
+
 var replaceElements = function(arr) {
-    let currHighest = arr[arr.length-1];   
-    for(let i = arr.length-1; i >= 0; i--){
-
-        let currElement = arr[i]
-        arr[i] = currHighest 
-
-        if(currElement > currHighest)currHighest = currElement
-        
+    let max = arr[arr.length-1];
+    arr[arr.length-1] = -1;
+    for(let i = arr.length-2; i >= 0; i--){
+        let current = arr[i];
+        arr[i] = max
+        if(current > max){
+            max = current
+        }
     }
-     arr[arr.length-1] = -1
-    console.log(arr)
-    return arr
-};
+  console.log(arr)
+  return arr
+}
+
+
+
