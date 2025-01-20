@@ -6,13 +6,15 @@
 
  */
 var maxSubArray = function(nums) {
-    let maximumValue = nums[0];
-    let currentRunningSum = 0;
+    if(nums.length === 1) return nums[0]
+    let current = 0;
+    let max = nums[0];
     for(let i = 0; i < nums.length; i++){
-        if(currentRunningSum < 0) currentRunningSum = 0;
-        currentRunningSum += nums[i];
-        maximumValue = Math.max(maximumValue, currentRunningSum)
+        current += nums[i];
+        max = Math.max(max, current);
+        if(current < 0){
+            current = 0;
+        }
     }
-    return maximumValue
-
-};
+    return max
+}
