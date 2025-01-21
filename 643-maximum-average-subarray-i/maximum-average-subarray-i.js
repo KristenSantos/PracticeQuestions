@@ -30,7 +30,6 @@ var findMaxAverage = function(nums, k) {
         }
         
     }
-    console.log(max)
     return max
 
 };
