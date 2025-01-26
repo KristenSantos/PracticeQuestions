@@ -11,7 +11,6 @@ const maxArea = (height) => {
         let currMin = height[s] < height[e] ? height[s] : height[e];
         let currWidth = e-s;
         let currArea = currMin * currWidth;
-        console.log(currArea)
         max = Math.max(max, currArea)
         if(height[s] < height[e]){
             s++
@@ -19,7 +18,6 @@ const maxArea = (height) => {
             e--
         }
     }
-    console.log(max)
     return max
 }
 
