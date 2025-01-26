@@ -4,7 +4,7 @@
  * @return {number}
  */
 const maxArea = (height) => {
-    let max = -Infinity;
+    let max = 0;
     let s = 0;
     let e = height.length-1;
     while(s <= e){
@@ -13,9 +13,9 @@ const maxArea = (height) => {
         let currArea = currMin * currWidth;
         max = Math.max(max, currArea)
         if(height[s] < height[e]){
-            s++
+            s++;
         } else {
-            e--
+            e--;
         }
     }
     return max
