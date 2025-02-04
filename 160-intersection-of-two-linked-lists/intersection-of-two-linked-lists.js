@@ -17,14 +17,24 @@ var getIntersectionNode = function(headA, headB) {
     let linkedListA = headA;
     let linkedListB = headB;
 
-    while(linkedListA){
-        linkedListA = linkedListA.next;
-        lengthA++
+    // while(linkedListA){
+    //     linkedListA = linkedListA.next;
+    //     lengthA++
 
-    }
-    while(linkedListB){
-        linkedListB = linkedListB.next;
-        lengthB++
+    // }
+    // while(linkedListB){
+    //     linkedListB = linkedListB.next;
+    //     lengthB++
+    // }
+        while(linkedListA || linkedListB){
+        if(linkedListA){
+            linkedListA = linkedListA.next;
+            lengthA++;
+        }
+        if(linkedListB){
+            linkedListB = linkedListB.next;
+            lengthB++;
+        }
     }
     let longerList = lengthA > lengthB ? headA : headB;
     let shorterList = lengthA > lengthB ? headB : headA;
