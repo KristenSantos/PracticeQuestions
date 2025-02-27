@@ -25,6 +25,5 @@ var maxDepth = function(root) {
             stack.push([node.right, height+1])
         }
     }
-    console.log(max)
-    return max
+        return max
 }
