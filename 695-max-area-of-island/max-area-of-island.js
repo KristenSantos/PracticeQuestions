@@ -15,7 +15,7 @@ var maxAreaOfIsland = function(grid) {
         visited.add(`${r},${c}`);
         
         while(queue.length > 0){
-            let [row,col] = queue.shift();
+            let [row,col] = queue.pop();
             const directions = [[0,1],[0,-1],[1,0],[-1,0]]
 
         for(let [dr, dc] of directions){
@@ -40,9 +40,6 @@ var maxAreaOfIsland = function(grid) {
             }
         }
     }
-
-
-
 
     return maxArea
 };
