@@ -13,7 +13,6 @@ var removeDuplicates = function(s) {
         }
         
     }
-    console.log(stack)
     return stack.join("")
     
 };
